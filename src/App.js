@@ -1,6 +1,7 @@
 import "./App.css";
 import SearchEngine from "./SearchEngine.js";
 import sun from "./img/sun.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (

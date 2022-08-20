@@ -1,34 +1,55 @@
 .App {
-  text-align: center;
-}
-.App {
   max-width: 450px;
   margin: 30px auto;
   border-radius: 17px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 30px;
   color: white;
-  background-color: rgb(227, 187, 136);
+  text-align: center;
 }
 
-.App img {
-  max-height: 60px;
-  margin: 20px 0 0 0;
+.App .current-weather {
+  background-image: url("./img/background-sunny.png");
+  background-size: 100%;
+  width: 100%;
+  padding: 30px;
+  border-radius: 17px;
+}
+
+.App .city-country {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.App .date-time {
+  font-size: 14px;
 }
 
 .App h1 {
-  font-size: 64px;
-}
-
-.App footer {
-  font-size: 10px;
-}
-.App footer a {
-  color: white;
+  font-size: 90px;
+  margin: 20px;
 }
 
 .App hr {
   max-width: 50px;
   text-align: center;
   margin: 0 auto;
+}
+
+.App .weather-description {
+  font-size: 30px;
+}
+
+.App .wind {
+  margin-bottom: 120px;
+}
+
+.App footer {
+  font-size: 10px;
+  color: rgb(228, 188, 139);
+  background-color: white;
+  padding-bottom: 30px;
+  border-radius: 17px;
+}
+.App footer a {
+  color: rgb(228, 188, 139);
 }

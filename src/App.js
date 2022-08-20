@@ -1,23 +1,26 @@
 import "./App.css";
 import SearchEngine from "./SearchEngine.js";
-import sun from "./img/sun.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
     <div className="App">
-      <SearchEngine />
-      <img src={sun} alt="sun" />
+      <div className="current-weather">
+        <SearchEngine />
+        <div className="city-country">nicosia, cy</div>
+        <div className="date-time">saturday, 20/08/2022, 10:41</div>
 
-      <h1>23°</h1>
-      <hr />
-      <p>sunny</p>
-      <div className="row">
-        <div className="col-6">humidity: 10%</div>
-        <div className="col-6">wind: 2 km/h</div>
+        <h1>23°</h1>
+        <hr />
+        <p className="weather-description">sunny</p>
+
+        <div className="humidity">humidity: 10%</div>
+        <div className="wind">wind: 2 km/h</div>
+
+        <br />
+        <br />
       </div>
-      <br />
-      <br />
       <footer>
         The app was coded by{" "}
         <a

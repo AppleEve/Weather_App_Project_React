@@ -7,9 +7,15 @@
   text-align: center;
 }
 
+.App .measure {
+  font-size: 35px;
+  position: relative;
+  top: -32px;
+}
+
 .App .current-weather {
-  background-image: url("./img/background-sunny.png");
-  background-size: 100%;
+  background-image: url("./img/background-sunny2.png");
+  background-size: cover;
   width: 100%;
   padding: 30px;
   border-radius: 17px;
@@ -25,22 +31,29 @@
 }
 
 .App h1 {
-  font-size: 90px;
+  font-size: 80px;
   margin: 20px;
 }
 
-.App hr {
-  max-width: 50px;
+.App .hr-decoration {
+  max-width: 80px;
   text-align: center;
   margin: 0 auto;
+  height: 4px;
+  background-color: white;
 }
 
 .App .weather-description {
   font-size: 30px;
+  margin: 5px 0 12px 0;
+}
+
+.App .humidity {
+  margin-top: 20px;
 }
 
 .App .wind {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .App footer {

@@ -11,8 +11,12 @@ export default function App() {
         <div className="city-country">nicosia, cy</div>
         <div className="date-time">saturday, 20/08/2022, 10:41</div>
 
-        <h1>23°</h1>
-        <hr />
+        <h1>
+          <spam className="main-temperature">34</spam>
+          <spam className="measure">°C</spam>
+        </h1>
+
+        <hr className="hr-decoration" />
         <p className="weather-description">sunny</p>
 
         <div className="humidity">humidity: 10%</div>

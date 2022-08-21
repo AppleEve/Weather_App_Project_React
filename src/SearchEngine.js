@@ -8,9 +8,9 @@ export default function SearchEngine() {
         <input
           className="search-window col-9"
           type="search"
-          placeholder="Select a city..."
+          placeholder="select a city..."
         />
-        <input className="submit-button col-2" type="submit" title="Search" />
+        <input className="submit-button col-2" type="submit" value="search" />
       </form>
     </div>
   );

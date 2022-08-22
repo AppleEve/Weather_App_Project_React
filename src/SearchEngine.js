@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./SearchEngine.css";
+import Time from "./Time";
 
 export default function SearchEngine() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,6 +13,8 @@ export default function SearchEngine() {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
+      date: new Date(response.data.dt * 1000),
       ready: true,
     });
   }
@@ -28,9 +31,11 @@ export default function SearchEngine() {
           <input className="submit-button col-2" type="submit" value="search" />
         </form>
         <div className="city-country text-lowercase">
-          {weatherData.city}, cy
+          {weatherData.city}, {weatherData.country}
         </div>
-        <div className="date-time">saturday, 20/08/2022, 10:41</div>
+        <div className="date-time">
+          <Time date={weatherData.date} />
+        </div>
 
         <h1>
           <span className="main-temperature">{weatherData.temperature}</span>

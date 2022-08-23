@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="current-weather">
-        <SearchEngine />
+        <SearchEngine defaultCity="Nicosia" />
         <footer>
           The app was coded by{" "}
           <a

@@ -1,5 +1,6 @@
 import React from "react";
 import Time from "./Time";
+import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,8 +13,8 @@ export default function WeatherInfo(props) {
       </div>
 
       <h1>
-        <span className="main-temperature">{props.data.temperature}</span>
-        <span className="measure">°C</span>
+        {" "}
+        <Temperature celsius={props.data.temperature} />
       </h1>
 
       <hr className="hr-decoration" />

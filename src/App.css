@@ -14,7 +14,7 @@
 }
 
 .App .current-weather {
-  background-image: url("./img/background-sunny2.png");
+  background-image: url("./img/01d-h.png");
   background-size: cover;
   width: 100%;
   padding: 30px;

@@ -22,9 +22,9 @@ export default function Temperature(props) {
       <div className="Temperature">
         <span className="main-temperature">{props.celsius}</span>
         <span className="measure">
-          °C |{" "}
+          °C{" "}
           <a href="/" onClick={displayFahrenheit}>
-            °F
+            | °F
           </a>
         </span>
       </div>
@@ -37,9 +37,9 @@ export default function Temperature(props) {
         </span>
         <span className="measure">
           <a href="/" onClick={displayCelsius}>
-            °C
+            °C |
           </a>{" "}
-          | °F
+          °F
         </span>
       </div>
     );

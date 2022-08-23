@@ -8,13 +8,18 @@
 }
 
 .App .measure {
-  font-size: 35px;
+  font-size: 20px;
   position: relative;
-  top: -32px;
+  top: -42px;
+}
+
+.App .measure a {
+  text-decoration: none;
+  color: rgb(255, 255, 255, 0.3);
 }
 
 .App .current-weather {
-  background-image: url("./img/01d-h.png");
+  background-image: url("./img/01d.png");
   background-size: cover;
   width: 100%;
   padding: 30px;
@@ -32,7 +37,7 @@
 
 .App h1 {
   font-size: 80px;
-  margin: 20px;
+  margin: 20px 0 20px 50px;
 }
 
 .App .hr-decoration {

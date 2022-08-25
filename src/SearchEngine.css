@@ -1,3 +1,10 @@
+.SearchEngine .current-weather {
+  background-size: cover;
+  width: 100%;
+  padding: 30px;
+  border-radius: 17px;
+}
+
 .SearchEngine .search-window,
 .SearchEngine .submit-button {
   border-radius: 10px;

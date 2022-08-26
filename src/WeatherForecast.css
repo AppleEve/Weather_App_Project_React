@@ -1,0 +1,8 @@
+.WeatherForecast {
+  color: rgb(185, 177, 182);
+  margin: 0 10px 30px 10px;
+}
+
+.WeatherForecast .day {
+  margin-bottom: 10px;
+}

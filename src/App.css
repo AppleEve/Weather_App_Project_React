@@ -43,6 +43,7 @@
 .App .weather-description {
   font-size: 30px;
   margin: 5px 0 12px 0;
+  transition: all 2s ease-in-out;
 }
 
 .App .humidity {
@@ -55,11 +56,11 @@
 
 .App footer {
   font-size: 10px;
-  color: rgb(228, 188, 139);
+  color: rgb(185, 177, 182);
   background-color: white;
   padding-bottom: 30px;
   border-radius: 17px;
 }
 .App footer a {
-  color: rgb(228, 188, 139);
+  color: rgb(185, 177, 182);
 }

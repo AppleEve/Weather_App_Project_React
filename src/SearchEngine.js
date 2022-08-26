@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./SearchEngine.css";
-//import BackgroundImage from "./BackgroundImage";
+import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
 // Background images
 import Sunny from "./img/01d.png";
-import CleanNight from "./img/02n.png";
+import CleanNight from "./img/01n.png";
 import PartlyCloudyDay from "./img/02d.png";
 import PartlyCloudyNight from "./img/02n.png";
 import CloudyDay from "./img/03d.png";
@@ -54,62 +54,65 @@ export default function SearchEngine(props) {
 
   if (weatherData.ready) {
     return (
-      <div
-        className="current-weather"
-        style={{
-          backgroundImage:
-            weatherData.icon === "01d"
-              ? `url(${Sunny})`
-              : weatherData.icon === "01n"
-              ? `url(${CleanNight})`
-              : weatherData.icon === "02d"
-              ? `url(${PartlyCloudyDay})`
-              : weatherData.icon === "02n"
-              ? `url(${PartlyCloudyNight})`
-              : weatherData.icon === "03d" || weatherData.icon === "04d"
-              ? `url(${CloudyDay})`
-              : weatherData.icon === "03n" || weatherData.icon === "04n"
-              ? `url(${CloudyNight})`
-              : weatherData.icon === "09d" || weatherData.icon === "10d"
-              ? `url(${RainyDay})`
-              : weatherData.icon === "09n" || weatherData.icon === "10n"
-              ? `url(${RainyNight})`
-              : weatherData.icon === "11d"
-              ? `url(${StormDay})`
-              : weatherData.icon === "11n"
-              ? `url(${StormNight})`
-              : weatherData.icon === "13d"
-              ? `url(${SnowDay})`
-              : weatherData.icon === "13n"
-              ? `url(${SnowNight})`
-              : weatherData.icon === "50d"
-              ? `url(${FogDay})`
-              : weatherData.icon === "50n"
-              ? `url(${FogNight})`
-              : `url(${CloudyDay})`,
-          backgroundSize: "cover",
-          width: "100%",
-          padding: "30px",
-          borderRadius: "17px",
-          transition: "2s",
-        }}
-      >
-        <div className="SearchEngine row">
-          <form onSubmit={handleSubmit}>
-            <input
-              onChange={updateCity}
-              className="search-window col-9"
-              type="search"
-              placeholder="select a city..."
-            />
-            <input
-              className="submit-button col-2"
-              type="submit"
-              value="search"
-            />
-          </form>
+      <div className="WeatherDisplay">
+        <div
+          className="current-weather"
+          style={{
+            backgroundImage:
+              weatherData.icon === "01d"
+                ? `url(${Sunny})`
+                : weatherData.icon === "01n"
+                ? `url(${CleanNight})`
+                : weatherData.icon === "02d"
+                ? `url(${PartlyCloudyDay})`
+                : weatherData.icon === "02n"
+                ? `url(${PartlyCloudyNight})`
+                : weatherData.icon === "03d" || weatherData.icon === "04d"
+                ? `url(${CloudyDay})`
+                : weatherData.icon === "03n" || weatherData.icon === "04n"
+                ? `url(${CloudyNight})`
+                : weatherData.icon === "09d" || weatherData.icon === "10d"
+                ? `url(${RainyDay})`
+                : weatherData.icon === "09n" || weatherData.icon === "10n"
+                ? `url(${RainyNight})`
+                : weatherData.icon === "11d"
+                ? `url(${StormDay})`
+                : weatherData.icon === "11n"
+                ? `url(${StormNight})`
+                : weatherData.icon === "13d"
+                ? `url(${SnowDay})`
+                : weatherData.icon === "13n"
+                ? `url(${SnowNight})`
+                : weatherData.icon === "50d"
+                ? `url(${FogDay})`
+                : weatherData.icon === "50n"
+                ? `url(${FogNight})`
+                : `url(${CloudyDay})`,
+            backgroundSize: "cover",
+            width: "100%",
+            padding: "30px",
+            borderRadius: "17px",
+            transition: "all 2s ease-in-out",
+          }}
+        >
+          <div className="SearchEngine row">
+            <form onSubmit={handleSubmit}>
+              <input
+                onChange={updateCity}
+                className="search-window col-9"
+                type="search"
+                placeholder="select a city..."
+              />
+              <input
+                className="submit-button col-2"
+                type="submit"
+                value="search"
+              />
+            </form>
+          </div>
+          <WeatherInfo data={weatherData} />
         </div>
-        <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {

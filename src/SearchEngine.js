@@ -4,7 +4,7 @@ import "./SearchEngine.css";
 import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
 // Background images
-import Sunny from "./img/01d.png";
+import Sunny from "./img/01hd.png";
 import CleanNight from "./img/01n.png";
 import PartlyCloudyDay from "./img/02d.png";
 import PartlyCloudyNight from "./img/02n.png";
@@ -33,6 +33,9 @@ export default function SearchEngine(props) {
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
+      lon: response.data.coord.lon,
+      lat: response.data.coord.lat,
+
       ready: true,
     });
   }
@@ -112,7 +115,7 @@ export default function SearchEngine(props) {
           </div>
           <WeatherInfo data={weatherData} />
         </div>
-        <WeatherForecast />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {

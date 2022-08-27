@@ -5,12 +5,13 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: white;
   text-align: center;
+  font-family: "Baloo 2", cursive;
 }
 
 .App .measure {
   font-size: 20px;
   position: relative;
-  top: -42px;
+  top: -35px;
 }
 
 .App .measure a {

@@ -23,11 +23,34 @@ export default function Weather(props) {
     "50n": "FOG",
   };
 
+  let color =
+    props.icon === "01d"
+      ? "#f9a872"
+      : props.icon === "01n" ||
+        props.icon === "02n" ||
+        props.icon === "03n" ||
+        props.icon === "04n" ||
+        props.icon === "09n" ||
+        props.icon === "10n" ||
+        props.icon === "13n" ||
+        props.icon === "50n"
+      ? "#404472"
+      : props.icon === "09d" ||
+        props.icon === "10d" ||
+        props.icon === "13d" ||
+        props.icon === "50d"
+      ? "#5d76a1"
+      : props.icon === "11d"
+      ? "#5b6b86"
+      : props.icon === "11n"
+      ? "#494b69"
+      : "#7996d1";
+
   return (
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
-      color={props.color}
-      size={36}
+      color={color}
+      size={50}
       animate={true}
     />
   );

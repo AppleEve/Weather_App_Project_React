@@ -33,6 +33,7 @@ export default function SearchEngine(props) {
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
       lon: response.data.coord.lon,
       lat: response.data.coord.lat,
 

@@ -1,10 +1,15 @@
 .WeatherForecast-temperatures {
   font-size: 15px;
+  padding: 5px;
 }
 
 .WeatherForecast-temperature-max {
   margin-right: 7px;
   font-weight: 600;
+}
+
+.WeatherForecast-day {
+  padding: 5px;
 }
 
 .WeatherForecast-day,
@@ -13,5 +18,5 @@
 }
 
 .WeatherForecast-temperature-min {
-  color: RGB(64, 68, 114, 0.7);
+  color: RGB(64, 68, 114, 0.5);
 }

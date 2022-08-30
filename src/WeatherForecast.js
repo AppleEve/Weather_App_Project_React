@@ -34,13 +34,26 @@ export default function WeatherForecast(props) {
               <div className="col">
                 <WeatherForecastDay data={forecast[3]} icon={props.data.icon} />
               </div>
+              <div className="col-1">
+                <button className="ButtonRight">
+                  {" "}
+                  <i class="fa-solid fa-angle-right"></i>{" "}
+                </button>
+              </div>
             </div>
+
             <Carousel.Caption>
               <h3>1</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <div className="row">
+              <div className="col-1">
+                <button className="ButtonLeft">
+                  {" "}
+                  <i class="fa-solid fa-angle-left"></i>{" "}
+                </button>
+              </div>
               <div className="col">
                 <WeatherForecastDay data={forecast[4]} icon={props.data.icon} />
               </div>

@@ -10,3 +10,18 @@
 .WeatherForecast h3 {
   opacity: 0%;
 }
+
+.ButtonRight,
+.ButtonLeft {
+  background-color: white;
+  color: rgb(185, 177, 182);
+  border: none;
+  position: relative;
+  top: 50px;
+}
+.ButtonRight {
+  right: 30px;
+}
+.ButtonLeft {
+  left: 25px;
+}

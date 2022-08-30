@@ -65,3 +65,9 @@
 .App footer a {
   color: rgb(185, 177, 182);
 }
+
+@media (max-width: 450px) {
+  .App {
+    margin: 0 5px;
+  }
+}

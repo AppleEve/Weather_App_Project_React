@@ -6,3 +6,7 @@
 .WeatherForecast .day {
   margin-bottom: 10px;
 }
+
+.WeatherForecast h3 {
+  opacity: 0%;
+}

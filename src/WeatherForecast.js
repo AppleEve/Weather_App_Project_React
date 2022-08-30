@@ -3,6 +3,7 @@ import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 import Carousel from "react-bootstrap/Carousel";
+import { SpinnerDotted } from "spinners-react";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -65,6 +66,6 @@ export default function WeatherForecast(props) {
 
     axios.get(apiUrl).then(handleResponse);
 
-    return null;
+    return <SpinnerDotted color="#c9c3c7" />;
   }
 }

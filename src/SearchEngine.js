@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./SearchEngine.css";
 import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
+import { SpinnerDotted } from "spinners-react";
 // Background images
 import Sunny from "./img/01hd.png";
 import CleanNight from "./img/01n.png";
@@ -121,5 +122,21 @@ export default function SearchEngine(props) {
     );
   } else {
     updateWeatherInfo();
+    return (
+      <div
+        className="loading-page"
+        style={{
+          backgroundImage: `url(${PartlyCloudyDay})`,
+          backgroundSize: "cover",
+          width: "100%",
+          paddingTop: "300px",
+          paddingBottom: "300px",
+          borderRadius: "17px",
+          transition: "all 2s ease-in-out",
+        }}
+      >
+        <SpinnerDotted color="white" />
+      </div>
+    );
   }
 }

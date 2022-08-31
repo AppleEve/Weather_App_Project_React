@@ -26,13 +26,25 @@ export default function WeatherForecast(props) {
           <Carousel.Item>
             <div className="row">
               <div className="col">
-                <WeatherForecastDay data={forecast[1]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[1]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
               <div className="col">
-                <WeatherForecastDay data={forecast[2]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[2]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
               <div className="col">
-                <WeatherForecastDay data={forecast[3]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[3]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
               <div className="col-1">
                 <button className="ButtonRight">
@@ -55,13 +67,25 @@ export default function WeatherForecast(props) {
                 </button>
               </div>
               <div className="col">
-                <WeatherForecastDay data={forecast[4]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[4]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
               <div className="col">
-                <WeatherForecastDay data={forecast[5]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[5]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
               <div className="col">
-                <WeatherForecastDay data={forecast[6]} icon={props.data.icon} />
+                <WeatherForecastDay
+                  data={forecast[6]}
+                  icon={props.data.icon}
+                  unit={props.unit}
+                />
               </div>
             </div>
             <Carousel.Caption>

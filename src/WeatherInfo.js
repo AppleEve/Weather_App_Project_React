@@ -5,7 +5,7 @@ import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="weatherInfo">
+    <div className="WeatherInfo">
       <div className="city-country text-lowercase">
         {props.data.city}, {props.data.country}
       </div>
@@ -15,7 +15,11 @@ export default function WeatherInfo(props) {
 
       <h1>
         {" "}
-        <Temperature celsius={props.data.temperature} />
+        <Temperature
+          celsius={props.data.temperature}
+          unit={props.unit}
+          setUnit={props.setUnit}
+        />
       </h1>
 
       <hr className="hr-decoration" />

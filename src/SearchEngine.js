@@ -23,6 +23,7 @@ import FogNight from "./img/50n.png";
 export default function SearchEngine(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function updateWeatherData(response) {
     setWeatherData({
@@ -115,9 +116,9 @@ export default function SearchEngine(props) {
               />
             </form>
           </div>
-          <WeatherInfo data={weatherData} />
+          <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
         </div>
-        <WeatherForecast data={weatherData} />
+        <WeatherForecast data={weatherData} unit={unit} />
       </div>
     );
   } else {

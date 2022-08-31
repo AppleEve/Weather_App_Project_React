@@ -5,12 +5,23 @@ import "./WeatherForecastDay.css";
 export default function WeatherForecastDay(props) {
   function maxTemperature() {
     let temperature = Math.round(props.data.temp.max);
-    return `${temperature}°`;
+    let temperatureFahrenheit = Math.round((temperature * 9) / 5 + 32);
+
+    if (props.unit === "celsius") {
+      return `${temperature}°`;
+    } else {
+      return `${temperatureFahrenheit}°`;
+    }
   }
 
   function minTemperature() {
     let temperature = Math.round(props.data.temp.min);
-    return `${temperature}°`;
+    let temperatureFahrenheit = Math.round((temperature * 9) / 5 + 32);
+    if (props.unit === "celsius") {
+      return `${temperature}°`;
+    } else {
+      return `${temperatureFahrenheit}°`;
+    }
   }
 
   function day() {

@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Temperature.css";
 
 export default function Temperature(props) {
-  const [unit, setUnit] = useState("celsius");
-
   function displayFahrenheit(event) {
     event.preventDefault();
-    setUnit("fahrenheit");
+    props.setUnit("fahrenheit");
   }
 
   function displayCelsius(event) {
     event.preventDefault();
-    setUnit("celsius");
+    props.setUnit("celsius");
   }
 
   function convertToFahrenheit() {
     return (props.celsius * 9) / 5 + 32;
   }
 
-  if (unit === "celsius") {
+  if (props.unit === "celsius") {
     return (
       <div className="Temperature">
         <span className="main-temperature">{props.celsius}</span>

@@ -17,3 +17,11 @@
 .SearchEngine .search-window {
   margin-right: 15px;
 }
+
+.SearchEngine .location-button {
+  background-color: none;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+}

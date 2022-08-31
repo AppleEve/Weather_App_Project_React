@@ -48,10 +48,25 @@ export default function SearchEngine(props) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${keyAPI}`;
     axios.get(url).then(updateWeatherData);
   }
+  function setCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      let apiKey = "711bf416fd4b68649d4f2e89cc233151";
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+      axios.get(apiUrl).then(updateWeatherData);
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
+
     updateWeatherInfo();
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    setCurrentLocation();
   }
 
   function updateCity(event) {
@@ -105,7 +120,7 @@ export default function SearchEngine(props) {
             <form onSubmit={handleSubmit}>
               <input
                 onChange={updateCity}
-                className="search-window col-9"
+                className="search-window col-8"
                 type="search"
                 placeholder="select a city..."
               />
@@ -114,6 +129,13 @@ export default function SearchEngine(props) {
                 type="submit"
                 value="search"
               />
+              <a
+                href="/"
+                className="location-button col-2"
+                onClick={handleClick}
+              >
+                <i class="fa-solid fa-location-dot"></i>
+              </a>
             </form>
           </div>
           <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
